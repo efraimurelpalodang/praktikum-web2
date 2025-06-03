@@ -37,7 +37,7 @@
                 <td><?= $row["status"]; ?></td>
                 <td>
                   <a href="?page=anggotaedit&id=<?= $row['id']; ?>" class="btn btn-success btn-sm"><i class="bi bi-pencil"></i> Edit</a>
-                  <a href="?page=anggotadelete$id=<?= $row['id']; ?>" class="btn btn-danger btn-sm"><i class="bi bi-trash" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')"></i> Hapus</a>
+                  <a href="?page=anggotadelete&id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')"><i class="bi bi-trash"></i> Hapus</a>
                 </td>
               </tr>
               <?php
