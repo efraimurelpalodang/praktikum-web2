@@ -32,7 +32,7 @@
                 <td><?= $row["nama_lengkap"]; ?></td>
                 <td><?= $row["alamat"]; ?></td>
                 <td><?= $row["no_hp"]; ?></td>
-                <td><?= $row["tanggal_lahir"]; ?></td>
+                <td><?= date('d-m-Y',strtotime($row["tanggal_lahir"])); ?></td>
                 <td><?= $row["jk"]; ?></td>
                 <td><?= $row["status"]; ?></td>
                 <td>

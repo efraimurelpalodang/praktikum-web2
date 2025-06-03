@@ -17,6 +17,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" ) {
     $_SESSION['id'] = $dataPengguna['id'];
     $_SESSION['username'] = $dataPengguna['username'];
     $_SESSION['role'] = $dataPengguna['role'];
+    $query = $connect->query("UPDATE pengguna SET login_terakhir=now() WHERE id='". $dataPengguna['id'] ."'");
     echo "<script>alert('Login berhasil');
     location.replace('../index.php?page=dashboard');</script>";
   } else {

@@ -33,7 +33,9 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="masterDataDropdown">
             <li><a class="dropdown-item" href="?page=anggota">Anggota</a></li>
-            <li><a class="dropdown-item" href="?page=pengguna">Pengguna</a></li>
+            <?php if($_SESSION['role'] == 'admin') : ?>
+              <li><a class="dropdown-item" href="?page=pengguna">Pengguna</a></li>
+            <?php endif; ?>
           </ul>
         </li>
 
@@ -43,8 +45,17 @@
         </li>
 
         <!-- Menu Laporan -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Laporan</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="laporanDropdown" role="button" 
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Laporan
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="laporanDropdown">
+            <li><a class="dropdown-item" target="_blank" href="report/anggota_report.php">Anggota</a></li>
+            <?php if($_SESSION['role'] == 'admin') : ?>
+              <li><a class="dropdown-item" href="?page=pengguna">Pengguna</a></li>
+            <?php endif; ?>
+          </ul>
         </li>
 
         <!-- Menu Logout -->
