@@ -51,9 +51,9 @@
             Laporan
           </a>
           <ul class="dropdown-menu" aria-labelledby="laporanDropdown">
-            <li><a class="dropdown-item" target="_blank" href="report/anggota_report.php">Anggota</a></li>
+          <li><a class="dropdown-item" href="report/anggota_report.php" target="_blank">Anggota</a></li>
             <?php if($_SESSION['role'] == 'admin') : ?>
-              <li><a class="dropdown-item" href="?page=pengguna">Pengguna</a></li>
+              <li><a class="dropdown-item" href="report/pengguna_report.php" target="_blank">Pengguna</a></li>
             <?php endif; ?>
           </ul>
         </li>
