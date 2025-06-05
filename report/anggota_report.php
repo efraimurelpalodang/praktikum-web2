@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../assets/fpdf.php';
 include '../config/koneksi.php';
 
@@ -27,6 +27,5 @@ while ($row = $query->fetch_assoc()) {
     $pdf->Cell(5, 1, $row['alamat'], 1, 0, 'C');
     $pdf->Cell(3, 1, $row['no_hp'], 1, 1, 'C');
 }
-$pdf->Output("I", 'laporan_anggota');
-
+$pdf->Output("I", 'laporan_anggota.pdf');
 ?>
